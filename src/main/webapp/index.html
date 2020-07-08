@@ -3,17 +3,41 @@
     <head>
         <meta charset="UTF-8">
         <title>Color-by number</title>
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="css/style.css">
         <script src="script.js"></script>
     </head>
     <body>
+      <div id="pallette-section">
         <h3 style="text-align:center;">Color Pallatte</h3>
-        <div class="center">
-            <button class="button button1">1</button>
-            <button class="button button2">2</button>
-            <button class="button button3">3</button>
-            <button class="button button4">4</button>
-            <button class="button button5">5</button>
+        <div id="pallette-holder">
+          <button class="palette-button" id="color1">1</button>
+          <button class="palette-button" id="color2">2</button>
+          <button class="palette-button" id="color3">3</button>
+          <button class="palette-button" id="color4">4</button>
+          <button class="palette-button" id="color5">5</button>
         </div>
+      </div>
+      <div id="pallette-section">
+        <table id="grid">
+          <tr>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton01">1</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton02">1</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton03">1</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton04">4</button></td>
+          </tr>
+          <tr>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton05">5</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton06">2</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton07">2</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton08">2</button></td>
+          </tr>
+          <tr>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton09">3</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton10">3</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton11">3</button></td>
+            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton12">3</button></td>
+          </tr>
+        </table>
+      </div>
     </body>
 </html>

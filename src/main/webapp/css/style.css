@@ -1,0 +1,70 @@
+#pallette-section {
+  height: 20%;
+}
+
+.palette-button {
+  border: none;
+  cursor: pointer;
+  color: white;
+  padding: 20px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  margin: 4px 25px;
+  border-radius: 50%;
+  width: 100px;
+  height:100px;
+}
+
+#color1 {
+  background-color: #F9EBEA;
+}
+
+#color2 {
+  background-color: rgb(199, 28, 15);
+}
+
+#color3 {
+  background-color: rgb(206, 190, 189);
+}
+
+#color4 {
+  background-color: rgb(129, 118, 118);
+}
+#color5 {
+  background-color: rgb(172, 176, 230);
+}
+
+#pallette-holder {
+  max-height:120px;
+  margin: auto;
+  width:60%;
+  padding: 10px;
+  border: 2px solid black;
+  overflow: auto;
+}
+
+#grid-section{
+  height: 80%;
+  display: flex;
+  align-content: center;
+  margin: auto;
+
+}
+
+#grid{
+  width: 80%;
+  padding-top: 5vh;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.gameButton {
+    margin: none;
+    outline: none;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom:50%;
+    box-sizing: border-box;
+}
