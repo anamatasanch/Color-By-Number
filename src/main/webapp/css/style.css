@@ -47,4 +47,24 @@
 
 #grid-section{
   height: 80%;
+  display: flex;
+  align-content: center;
+  margin: auto;
+
+}
+
+#grid{
+  width: 80%;
+  padding-top: 5vh;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.gameButton {
+    margin: none;
+    outline: none;
+    width: 100%;
+    padding-top: 50%;
+    padding-bottom:50%;
+    box-sizing: border-box;
 }
