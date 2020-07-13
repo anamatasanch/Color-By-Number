@@ -17,6 +17,19 @@
   height:100px;
 }
 
+ #pallette-holder {
+        max-height: 100px;
+        margin: auto;
+        width:60%;
+        padding: 10px;
+        border: 2px solid black;
+        overflow-y: hidden;
+        overflow-x:auto;
+        white-space: nowrap;
+    }
+
+
+
 #color1 {
   background-color: #F9EBEA;
 }
@@ -36,14 +49,7 @@
   background-color: rgb(172, 176, 230);
 }
 
-#pallette-holder {
-  max-height:120px;
-  margin: auto;
-  width:60%;
-  padding: 10px;
-  border: 2px solid black;
-  overflow: auto;
-}
+
 
 #grid-section{
   height: 80%;
