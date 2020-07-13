@@ -17,7 +17,7 @@
   height:100px;
 }
 
- #pallette-holder {
+ .pallette-holder {
         max-height: 100px;
         margin: auto;
         width:60%;
@@ -28,7 +28,17 @@
         white-space: nowrap;
     }
 
+.pallette-holder :hover {
+    border: 3px solid black;
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.2);
+}
 
+.active {
+    color: black;
+    border: 3px solid black;
+}
 
 #color1 {
   background-color: #F9EBEA;
