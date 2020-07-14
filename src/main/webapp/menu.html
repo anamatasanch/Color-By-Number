@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Menu</title>
+        <link rel="stylesheet" href="menuStyle.css">
+        <script src="mapScript.js"></script>
+    </head>
+
+    <body id="body">
+        <center>
+        <h1>Pick a Map</h1>
+        </center>
+
+        <div class="container">
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <a class="prev" onclick="plusMaps(-1)">&#10094;</a>
+                        </td>
+                        <td>
+                            <div class="allMaps firstMap fade">
+                                <a href="index.html"><img class="map" src="Default_Maps/Owl.png"/></a>
+                                <h2>Map 1</h2>
+                            </div>
+
+                            <div class="allMaps fade">
+                                <a href="index.html"><img class="map" src="Default_Maps/Owl.png"/></a>
+                                <h2>Map 2</h2>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="next" onclick="plusMaps(1)">&#10095;</a>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+        </div>
+            
+    </body>
+</html>
