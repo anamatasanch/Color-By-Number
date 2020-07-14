@@ -37,12 +37,17 @@
 }
 
 #pallette-holder {
-  max-height:120px;
+  max-height:175px;
   margin: auto;
   width:60%;
-  padding: 10px;
-  border: 2px solid black;
+  padding: 0px 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.308);
+  border-radius: 5px;
   overflow: auto;
+  position: fixed;
+  left: 20%;
+  top: 3%;
+  background-color: rgba(255, 255, 255, 0.466);
 }
 
 #grid-section{
@@ -67,4 +72,8 @@
     padding-top: 50%;
     padding-bottom:50%;
     box-sizing: border-box;
+}
+
+table{
+    margin-top: 200px;
 }
