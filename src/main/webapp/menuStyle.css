@@ -1,0 +1,75 @@
+div.container {
+    height: 200px;
+    top: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.allMaps {
+    display: none;
+}
+
+.firstMap {
+    display:block;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Map image */
+img.map {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 25em;
+    outline: none;
+    image-rendering: auto;
+    image-rendering: crisp-edges;
+    image-rendering: pixelated;     
+}
+
+.map:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    padding: 20px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    background-color:#868686;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);   
+}
