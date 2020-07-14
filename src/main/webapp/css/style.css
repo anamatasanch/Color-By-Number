@@ -36,7 +36,7 @@
   background-color: rgb(172, 176, 230);
 }
 
-#pallette-holder {
+.pallette-holder {
   max-height:175px;
   margin: auto;
   width:60%;
