@@ -25,6 +25,14 @@
         </nav>
       </div>
       <div class="content-container">
+        <div class="form-group">
+        <form action="UploadServlet" method="post" enctype="multipart/form-data">
+          <input type="file" name="file"/>
+          <br/>
+          <br/>
+          <input type="submit" value="Upload File" class="btn btn-primary" id="upload-btn"/>
+        </form>
+        </div>
       </div>
 
       <!-- Scripts for bootstrap -->
