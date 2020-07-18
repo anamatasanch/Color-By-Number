@@ -1,4 +1,4 @@
-/** Fetches comments from the server and adds them to the DOM. */
+/** Fetches hex colors from the server and adds them to the DOM. */
 function loadGrid() {
     fetch('/color-grid').then(response => response.json()).then((pixelsList) => {
         const gameArea = document.getElementById("grid");
@@ -34,7 +34,7 @@ function loadGrid() {
 
 var buttonID = 1;
 
-/** Creates an element that represents a comment */
+/** Creates an element that represents a button */
 function createButtonElement(pixel) {
     const buttonElement = document.createElement('button');
     buttonElement.className = 'gameButton';
