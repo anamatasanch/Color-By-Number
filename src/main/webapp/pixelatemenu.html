@@ -7,6 +7,7 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="js/script.js"></script>
+        <script src="./path/to/dropzone.js"></script>
         <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
     </head>
     <body>
@@ -26,7 +27,7 @@
       </div>
       <div class="content-container">
         <div class="form-group">
-        <form action="UploadServlet" method="post" enctype="multipart/form-data">
+        <form action="/UploadServlet" method="POST" enctype="multipart/form-data">
           <input type="file" name="file"/>
           <br/>
           <br/>
