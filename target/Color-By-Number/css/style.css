@@ -17,32 +17,6 @@
   height:100px;
 }
 
-.pallette-holder {
-  max-height:175px;
-  margin: auto;
-  width:60%;
-  padding: 0px 10px 15px;
-  border: 1px solid rgba(0, 0, 0, 0.308);
-  border-radius: 5px;
-  overflow: auto;
-  position: fixed;
-  left: 20%;
-  top: 3%;
-  background-color: rgba(255, 255, 255, 0.466);
-}
-
-.pallette-holder :hover {
-    border: 3px solid black;
-    -ms-transform: scale(1.5);
-    -webkit-transform: scale(1.5);
-    transform: scale(1.2);
-}
-
-.active {
-    color: black;
-    border: 3px solid black;
-}
-
 #color1 {
   background-color: #F9EBEA;
 }
@@ -60,6 +34,19 @@
 }
 #color5 {
   background-color: rgb(172, 176, 230);
+}
+
+#pallette-holder {
+  max-height:175px;
+  margin: auto;
+  width:60%;
+  padding: 0px 10px 15px;
+  border: 2px solid black;
+  overflow: auto;
+  position: fixed;
+  left: 20%;
+  top: 3%;
+  background-color: white;
 }
 
 #grid-section{
