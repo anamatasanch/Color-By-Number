@@ -1,3 +1,4 @@
+package com.google.sps.cell;
 
 /** An cell in an image. */
 public class Cell {
