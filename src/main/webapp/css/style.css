@@ -61,12 +61,34 @@
 }
 
 .gameButton {
-    margin: none;
-    outline: none;
-    width: 100%;
-    padding-top: 50%;
-    padding-bottom:50%;
-    box-sizing: border-box;
+  margin: none;
+  outline: none;
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom:50%;
+  box-sizing: border-box;
+}
+
+.navbar{
+  background-color: #8BCBC8;
+  min-height: 7vh;
+}
+
+.navbar-brand{
+  font-family: 'ABeeZee';
+  font-size: 2em !important;
+  padding-right: 10px;
+}
+
+.content-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+#upload-btn{
+  background-color: #8BCBC8;
+  border-color: #8BCBC8;
 }
 
 table{
