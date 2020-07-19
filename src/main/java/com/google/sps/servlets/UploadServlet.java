@@ -17,10 +17,12 @@ import java.awt.Image;
 import java.awt.Graphics;
 import java.awt.Color;
 import java.awt.image.DataBufferInt;
+import com.google.gson.Gson;
 
 @MultipartConfig
 @WebServlet("/UploadServlet")
 public class UploadServlet extends HttpServlet {
+  String[] hexColors = new String[256];
 
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     Part filePart = request.getPart("file"); // Retrieves <input type="file" name="file">
@@ -37,8 +39,6 @@ public class UploadServlet extends HttpServlet {
 
     //Get the colors from the pixelated image
     int[] colors = ( (DataBufferInt) pixImg.getRaster().getDataBuffer() ).getData();
-    //Create new array to save the hex colors as strings
-    String[] hexColors = new String[256];
 
     //Go through every color
     for ( int i = 0 ; i < colors.length ; i++ ) {
@@ -61,5 +61,20 @@ public class UploadServlet extends HttpServlet {
 
     IOUtils.closeQuietly(fileContent);
     response.sendRedirect(request.getContextPath() + "/game.html");
+  }
+
+  @Override
+  public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    Gson gson = new Gson();
+
+    response.setContentType("application/json;");
+    response.getWriter().println(gson.toJson(hexColors));
+    hexColors = new String[256];
+  }
+
+  private String convertToJson(String[] hexColors) {
+    Gson gson = new Gson();
+    String json = gson.toJson(hexColors);
+    return json;
   }
 }
