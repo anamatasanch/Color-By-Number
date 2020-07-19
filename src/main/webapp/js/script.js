@@ -21,6 +21,9 @@ function setColor(gameButton) {
     property.style.backgroundColor = activeColor[0].style.backgroundColor;
 }
 
+async function getColors() {
+  const response = await fetch('/UploadServlet');
+  const colors = await response.json();
 
-
-
+  console.log(colors);
+}
