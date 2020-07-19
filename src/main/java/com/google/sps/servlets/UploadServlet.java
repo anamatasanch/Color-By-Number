@@ -60,5 +60,6 @@ public class UploadServlet extends HttpServlet {
     }
 
     IOUtils.closeQuietly(fileContent);
+    response.sendRedirect(request.getContextPath() + "/game.html");
   }
 }
