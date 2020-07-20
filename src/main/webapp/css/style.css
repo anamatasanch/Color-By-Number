@@ -21,14 +21,26 @@
   max-height:175px;
   margin: auto;
   width:60%;
-  padding: 0px 10px 15px;
+  padding: 40px 10px 15px;
   border: 1px solid rgba(0, 0, 0, 0.308);
   border-radius: 5px;
-  overflow: auto;
+  overflow-y: hidden;
+  overflow-x: auto;
   position: fixed;
+  white-space: nowrap;
   left: 20%;
   top: 3%;
   background-color: rgba(255, 255, 255, 0.466);
+}
+
+h3 {
+  max-height:175px;
+  margin: auto;
+  width:60%;
+  padding: 10px;
+  position: fixed;
+  left: 20%;
+  top: 3%;
 }
 
 .pallette-holder :hover {
