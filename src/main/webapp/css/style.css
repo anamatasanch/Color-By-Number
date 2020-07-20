@@ -6,6 +6,8 @@
   border: none;
   cursor: pointer;
   color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
   padding: 20px;
   text-align:center;
   text-decoration: none;
