@@ -3,7 +3,8 @@ function getActive(){
     var paletteHolder = header.getElementsByClassName("palette-button");
     for(var i=0; i < paletteHolder.length; i++){
       paletteHolder[i].addEventListener("click", function() {
-          var current = this;
+          var current = document.getElementsByClassName("active-button");
+          current[0].className = current[0].className.replace(" active-button", "");
           this.className += " active-button";
           console.log(current);
           console.log("we got active!");
