@@ -22,5 +22,15 @@ function setColor(gameButton) {
 }
 
 
+function correctPopUp(){
+    console.log("gotcha");
+    alert("Correct!");
+}
+
+function tryAgainPopUp(){
+    console.log("gotcha");
+    alert("Sorry, try again!");
+}
+
 
 
