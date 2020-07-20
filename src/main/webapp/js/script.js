@@ -3,10 +3,10 @@ function getActive(){
     var paletteHolder = header.getElementsByClassName("palette-button");
     for(var i=0; i < paletteHolder.length; i++){
       paletteHolder[i].addEventListener("click", function() {
-          var current = this;
-          this.className += " active-button";
-          console.log(current);
-          console.log("we got active!");
+        var current = document.getElementsByClassName("active-button");
+        current[0].className = current[0].className.replace(" active-button", "");
+        this.className += " active-button";
+        console.log(current);
       });
     }
 }
@@ -35,7 +35,19 @@ function createPalette(colors){
   let colorMap = new Map();
 
   for (i = 0; i < colors.length; i++) {
-      if (!colorMap.has(colors[i])){
+      if (i===1){
+        let btnElement = document.createElement('button');
+        btnElement.innerText = count;
+        btnElement.classList.add('palette-button');
+        btnElement.classList.add('active-button');
+        btnElement.setAttribute("id", count);
+        btnElement.setAttribute("style", "background-color: "+colors[i]+";");
+        let palletteDiv = document.getElementById("palette");
+        palletteDiv.appendChild(btnElement);
+
+        colorMap.set(colors[i], count);
+        count++;
+      }else if (!colorMap.has(colors[i])){
         let btnElement = document.createElement('button');
         btnElement.innerText = count;
         btnElement.classList.add('palette-button');
