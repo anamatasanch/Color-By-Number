@@ -6,7 +6,7 @@ function getActive(){
         var current = document.getElementsByClassName("active-button");
         current[0].className = current[0].className.replace(" active-button", "");
         this.className += " active-button";
-        console.log(current);
+        console.log(current.style.backgroundColor, "I am here");
       });
     }
 }
@@ -40,7 +40,7 @@ function createPalette(colors){
         btnElement.innerText = count;
         btnElement.classList.add('palette-button');
         btnElement.classList.add('active-button');
-        btnElement.setAttribute("id", count);
+        btnElement.setAttribute("id", count+'p');
         btnElement.setAttribute("style", "background-color: "+colors[i]+";");
         let palletteDiv = document.getElementById("palette");
         palletteDiv.appendChild(btnElement);
@@ -78,7 +78,7 @@ function createPalette(colors){
     let btnElement = document.createElement('button');
     btnElement.classList.add('gameButton');
     btnElement.onclick = function() { setColor(this.id); };
-    btnElement.setAttribute("id", colorMap.get(colors[i]));
+    btnElement.setAttribute("id", colorMap.get(colors[i])+'c');
     btnElement.innerText = colorMap.get(colors[i]);
     tdElement.appendChild(btnElement);
   }
