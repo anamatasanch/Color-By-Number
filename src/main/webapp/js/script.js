@@ -83,3 +83,14 @@ function createPalette(colors){
     tdElement.appendChild(btnElement);
   }
  }
+
+
+function correctPopUp(){
+    console.log("gotcha");
+    alert("Correct!");
+}
+
+function tryAgainPopUp(){
+    console.log("gotcha");
+    alert("Sorry, try again!");
+}
