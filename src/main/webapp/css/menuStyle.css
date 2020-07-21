@@ -1,0 +1,145 @@
+/*@charset "utf-8";
+#body {	
+    /*background-color: #7D7D7D;
+    background-image: url("../../Background_Image/Pixel_Sky.png"); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+
+    font: 15px/25px Helvetica, sans-serif;
+    font-stretch: ultra-expanded;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}*/
+
+html, body {
+  	margin: 0;
+  	width: 100%;
+  	height: 100%;
+    background-color: #5b3e64;
+    font: 15px/25px Helvetica, sans-serif;
+    font-stretch: ultra-expanded;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+.pixelated-scroll {
+  	width: 100%;
+  	height: 100%;
+  	image-rendering: crisp-edges;
+  	background-image: url("../../Background_Image/Pixel_Sky.png");
+  	background-size: 70%;
+  	background-repeat: repeat-x;
+  	background-position: left center;
+  	box-sizing: border-box;
+    animation: slide 10s linear infinite;
+}
+@keyframes slide {
+  	from { background-position: left center; }
+  	to { background-position: 100% center; }
+}
+
+div.header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1{
+    color:#FFFFFF;
+    font-size: 3vw;
+    line-height: 4vw;
+    letter-spacing: 20px;
+    font-weight: 90;
+}
+
+h2{
+    color:#FFFFFF;
+    font-size: 2vw;
+    line-height: 2.5vw;
+    letter-spacing: 0.6vw;
+    font-weight: 70;
+}
+
+div.container {
+    height: 200px;
+    top: 50px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+td {
+    vertical-align: middle;
+    text-align: center;
+}
+
+.allMaps {
+    display: none;
+}
+
+.firstMap {
+    display:block;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* Map image */
+img.map {
+    margin-left: auto;
+    margin-right: auto;
+    padding: 20px;
+    width: 25em;
+    outline: none;
+}
+
+img.pixelMap {
+    image-rendering: pixelated;  
+}
+
+img.userMap {
+    image-rendering: crisp-edges;
+}
+
+.map:hover {
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
+
+/* Next & previous buttons */
+.prev, .next {
+    padding: 20px;
+    cursor: pointer;
+    color: black;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+.prev:hover, .next:hover {
+    background-color:#868686;
+    opacity: 0.6;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);   
+}
