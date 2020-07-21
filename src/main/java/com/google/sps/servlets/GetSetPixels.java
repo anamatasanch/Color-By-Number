@@ -18,13 +18,33 @@ import com.google.gson.Gson;
 @WebServlet("/color-grid")
 public class GetSetPixels extends HttpServlet {
 
+    // String array to hold all hex colors of a image
+    String[] hexArray = new String[256];
+
     @Override
-    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {
         BufferedImage img = null;
         File imgFile = null;
 
+        String imgFileRequest = "";
+        if(request.getParameter("mapChioce1") != null){
+            imgFileRequest = "Default_Maps/Owl.png";
+            System.out.println("Owl is Picked");
+        }
+        else if(request.getParameter("mapChioce2") != null){
+            imgFileRequest = "Default_Maps/Orange_Cat.png";
+            System.out.println("Cat is Picked");
+        }
+        else if(request.getParameter("mapChioce3") != null){
+            imgFileRequest = "Default_Maps/Pig.png";
+            System.out.println("Pig is Picked");
+        }
+        else{
+            System.out.println("NOTHING IS PICKED");
+        }
+
         try {
-            imgFile = new File("Default_Maps/Owl.png");
+            imgFile = new File(imgFileRequest);
             img = ImageIO.read(imgFile);
         } catch(IOException error) {
             System.out.println(error);
@@ -54,16 +74,22 @@ public class GetSetPixels extends HttpServlet {
 
                 System.out.println(colorGrid[xAxis][yAxis]);
             }
-        }
+        }   
         
-        String[] hexArray = new String[pixelsHexList.size()];
         hexArray = pixelsHexList.toArray(hexArray);
         System.out.println("SIZE: " + pixelsHexList.size());
 
+        // Redirect back to the HTML page.
+        response.sendRedirect(request.getContextPath() + "/generateGridTest.html");
+    }
+
+    @Override
+    public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
         response.setContentType("application/json;");
         Gson gson = new Gson();
         String json = gson.toJson(hexArray);
         response.getWriter().println(json);
 
+        hexArray = new String[256];
     }
 }

@@ -13,7 +13,7 @@
         </div>
 
         <div class="container">
-            <form action="GetSetPixels" method="GET">
+            <form action="/color-grid" method="POST">
             <center>
                 <table>
                     <tr>
@@ -22,22 +22,22 @@
                         </td>
                         <td>
                             <div class="allMaps firstMap fade">
-                                <button onclick="location.href='generateGridTest.html';" type="mapChioce" name="mapChioce1"><img class="map pixelMap" src="Default_Maps/Owl.png"/></button>
+                                <button type='submit' name='mapChioce1' value='mapChioce1'><img class="map pixelMap" src="Default_Maps/Owl.png"/></button>
                                 <h2>Map 1</h2>
                             </div>
 
                             <div class="allMaps fade">
-                                <button onclick="location.href='generateGridTest.html';" type="mapChioce" name="mapChioce2"><img class="map pixelMap" src="Default_Maps/Orange_Cat.png"/></button>
+                                <button type='submit' name='mapChioce2' value='mapChioce2'><img class="map pixelMap" src="Default_Maps/Orange_Cat.png"/></button>
                                 <h2>Map 2</h2>
                             </div>
 
                             <div class="allMaps fade">
-                                <button onclick="location.href='generateGridTest.html';" type="mapChioce" name="mapChioce3"><img class="map pixelMap" src="Default_Maps/Pig.png"/></button>
+                                <button type='submit' name='mapChioce3' value='mapChioce3'><img class="map pixelMap" src="Default_Maps/Pig.png"/></button>
                                 <h2>Map 3</h2>
                             </div>
 
                             <div class="allMaps fade">
-                                <button onclick="location.href='generateGridTest.html';" type="mapChioce" name="mapChioce4"><img class="map userMap" src="Default_Maps/User_Image.png"/></button>
+                                <a href="pixelatemenu.html"><button type="button"><img class="map userMap" src="Default_Maps/User_Image.png"/></button></a>
                                 <h2>Upload Map</h2>
                             </div>
                         </td>
@@ -45,7 +45,6 @@
                             <a class="next" onclick="plusMaps(1)">&#10095;</a>
                         </td>
                     </tr>
-
                 </table>
             </center>
             </form>
