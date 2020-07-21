@@ -3,17 +3,16 @@
     <head>
         <meta charset="UTF-8">
         <title>Menu</title>
-        <link rel="stylesheet" href="menuStyle.css">
-        <script src="mapScript.js"></script>
+        <link rel="stylesheet" href="css/menuStyle.css">
+        <script src="js/mapMenuScript.js"></script>
     </head>
 
-    <body id="body" onload="customCursor()">
-        <div class="cursor"></div>
-        <center>
-        <h1>Pick a Map</h1>
-        </center>
-
+    <body id="body" class="pixelated-scroll">
+        <div class="header">
+            <h1>Color By Number</h1>
+        </div>
         <div class="container">
+            <form action="/color-grid" method="POST">
             <center>
                 <table>
                     <tr>
@@ -22,13 +21,23 @@
                         </td>
                         <td>
                             <div class="allMaps firstMap fade">
-                                <a href="index.html"><img class="map" src="Default_Maps/Owl.png"/></a>
+                                <button type='submit' name='mapChioce1' value='mapChioce1'><img class="map pixelMap" src="Default_Maps/Owl.png"/></button>
                                 <h2>Map 1</h2>
                             </div>
 
                             <div class="allMaps fade">
-                                <a href="index.html"><img class="map" src="Default_Maps/Owl.png"/></a>
+                                <button type='submit' name='mapChioce2' value='mapChioce2'><img class="map pixelMap" src="Default_Maps/Orange_Cat.png"/></button>
                                 <h2>Map 2</h2>
+                            </div>
+
+                            <div class="allMaps fade">
+                                <button type='submit' name='mapChioce3' value='mapChioce3'><img class="map pixelMap" src="Default_Maps/Pig.png"/></button>
+                                <h2>Map 3</h2>
+                            </div>
+
+                            <div class="allMaps fade">
+                                <a href="pixelatemenu.html"><button type="button"><img class="map userMap" src="Default_Maps/User_Image.png"/></button></a>
+                                <h2>Upload Map</h2>
                             </div>
                         </td>
                         <td>
@@ -37,7 +46,8 @@
                     </tr>
                 </table>
             </center>
+            </form>
         </div>
-            
+        
     </body>
 </html>

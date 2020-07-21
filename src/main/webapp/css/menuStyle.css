@@ -1,3 +1,54 @@
+html, body {
+  	margin: 0;
+  	width: 100%;
+  	height: 100%;
+    background-color: #5b3e64;
+    font: 15px/25px Helvetica, sans-serif;
+    font-stretch: ultra-expanded;
+    text-transform: uppercase;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pixelated-scroll {
+  	width: 100%;
+  	height: 100%;
+  	image-rendering: crisp-edges;
+  	background-image: url("../../Background_Image/Pixel_Sky.png");
+  	background-size: 70%;
+  	background-repeat: repeat-x;
+  	background-position: left center;
+  	box-sizing: border-box;
+    animation: slide 10s linear infinite;
+}
+
+@keyframes slide {
+  	from { background-position: left center; }
+  	to { background-position: 100% center; }
+}
+
+div.header {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+}
+
+h1{
+    color:#FFFFFF;
+    font-size: 3vw;
+    line-height: 4vw;
+    letter-spacing: 20px;
+    font-weight: 90;
+}
+
+h2{
+    color:#FFFFFF;
+    font-size: 2vw;
+    line-height: 2.5vw;
+    letter-spacing: 0.6vw;
+    font-weight: 70;
+}
+
 div.container {
     height: 200px;
     top: 50px;
@@ -44,9 +95,14 @@ img.map {
     padding: 20px;
     width: 25em;
     outline: none;
-    image-rendering: auto;
+}
+
+img.pixelMap {
+    image-rendering: pixelated;  
+}
+
+img.userMap {
     image-rendering: crisp-edges;
-    image-rendering: pixelated;     
 }
 
 .map:hover {
@@ -69,6 +125,7 @@ img.map {
 
 .prev:hover, .next:hover {
     background-color:#868686;
+    opacity: 0.6;
     -webkit-transform: scale(1.05);
     -ms-transform: scale(1.05);
     transform: scale(1.05);   
