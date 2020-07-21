@@ -1,18 +1,3 @@
-/*@charset "utf-8";
-#body {	
-    /*background-color: #7D7D7D;
-    background-image: url("../../Background_Image/Pixel_Sky.png"); 
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-size: 100% 100%;
-
-    font: 15px/25px Helvetica, sans-serif;
-    font-stretch: ultra-expanded;
-    text-transform: uppercase;
-    margin-left: auto;
-    margin-right: auto;
-}*/
-
 html, body {
   	margin: 0;
   	width: 100%;
@@ -24,6 +9,7 @@ html, body {
     margin-left: auto;
     margin-right: auto;
 }
+
 .pixelated-scroll {
   	width: 100%;
   	height: 100%;
@@ -35,6 +21,7 @@ html, body {
   	box-sizing: border-box;
     animation: slide 10s linear infinite;
 }
+
 @keyframes slide {
   	from { background-position: left center; }
   	to { background-position: 100% center; }
