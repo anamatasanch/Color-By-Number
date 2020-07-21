@@ -53,10 +53,10 @@ public class GetSetPixels extends HttpServlet {
         // Get image width and height
         int width = img.getWidth(),
             height = img.getHeight();
-            
+
         // Pixel coordinates
         int xAxis = 0,
-            yAxis = 0, 
+            yAxis = 0,
             pixelRGB = img.getRGB(xAxis, yAxis);
 
         // 2D Array contains hex of image pixels
@@ -71,13 +71,10 @@ public class GetSetPixels extends HttpServlet {
                 colorGrid[xAxis][yAxis] = "#" + Integer.toHexString(pixelRGB).substring(2);
 
                 pixelsHexList.add(colorGrid[xAxis][yAxis]);
-
-                System.out.println(colorGrid[xAxis][yAxis]);
             }
-        }   
-        
+        }
+
         hexArray = pixelsHexList.toArray(hexArray);
-        System.out.println("SIZE: " + pixelsHexList.size());
 
         // Redirect back to the HTML page.
         response.sendRedirect(request.getContextPath() + "/generateGridTest.html");
