@@ -4,7 +4,6 @@
 
 <web-app>
   <display-name>Archetype Created Web Application</display-name>
-
     <servlet>
         <servlet-name>GetSetPixels</servlet-name>
         <servlet-class>com.google.sps.servlets.GetSetPixels</servlet-class>
@@ -13,5 +12,15 @@
     <servlet-mapping>
         <servlet-name>GetSetPixels</servlet-name>
         <url-pattern>/color-grid</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>UploadServlet</servlet-name>
+        <servlet-class>com.google.sps.servlets.UploadServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>UploadServlet</servlet-name>
+        <url-pattern>/UploadServlet</url-pattern>
     </servlet-mapping>
 </web-app>

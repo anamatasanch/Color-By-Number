@@ -1,0 +1,158 @@
+#pallette-section {
+  height: 20%;
+}
+
+.palette-button {
+  border: none;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: black;
+  padding: 20px;
+  text-align:center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 50px;
+  margin: 4px 25px;
+  border-radius: 50%;
+  width: 100px;
+  height:100px;
+}
+
+.pallette-holder {
+  max-height:175px;
+  margin: auto;
+  width:60%;
+  padding: 40px 10px 15px;
+  border: 1px solid rgba(0, 0, 0, 0.308);
+  border-radius: 5px;
+  overflow-y: hidden;
+  overflow-x: auto;
+  position: fixed;
+  white-space: nowrap;
+  left: 20%;
+  top: 3%;
+  background-color: rgba(255, 255, 255, 0.466);
+}
+
+h3 {
+  max-height:175px;
+  margin: auto;
+  width:60%;
+  padding: 10px;
+  position: fixed;
+  left: 20%;
+  top: 3%;
+}
+
+.pallette-holder :hover {
+    border: 3px solid black;
+    -ms-transform: scale(1.5);
+    -webkit-transform: scale(1.5);
+    transform: scale(1.2);
+}
+
+.active-button {
+    color: black;
+    border: 3px solid black;
+}
+
+
+
+#grid-section{
+  height: 80%;
+  display: flex;
+  align-content: center;
+  margin: auto;
+
+}
+
+#grid{
+  width: 80%;
+  padding-top: 5vh;
+  margin-left:auto;
+  margin-right:auto;
+}
+
+.gameButton {
+  margin: none;
+  outline: none;
+  width: 100%;
+  padding-top: 50%;
+  padding-bottom:50%;
+  box-sizing: border-box;
+}
+
+.navbar{
+  background-color: #8BCBC8;
+  min-height: 7vh;
+}
+
+.navbar-brand{
+  font-family: 'ABeeZee';
+  font-size: 2em !important;
+  padding-right: 10px;
+}
+
+.content-container{
+  display: flex;
+  justify-content: center;
+  padding-top: 100px;
+}
+
+#upload-btn{
+  background-color: #8BCBC8;
+  border-color: #8BCBC8;
+}
+
+table{
+    margin-top: 200px;
+}
+
+.cursor {
+    width: 20px;
+    height: 20px;
+    border: 1px solid black;
+    border-radius: 50%;
+    position: absolute;
+    animation: cursorAnim .5s infinite alternate;
+    pointer-events: none;
+}
+
+.cursor::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    border: 8px solid gray;
+    border-radius: 50%;
+    opacity: .5;
+    top: -8px;
+    left: -8px;
+    animation: cursorAnim2 .5s infinite alternate;
+}
+
+@keyframes cursorAnim {
+    from {transform: scale(1);}
+    to {transform: scale(.7);}
+}
+
+@keyframes cursorAnim2 {
+    from {transform: scale(1);}
+    to {transform: scale(.4);}
+}
+
+@keyframes cursorAnim3 {
+    0% {transform: scale(1);}
+    50% {transform: scale(3);}
+    100% {transform: scale(1);}
+    opacity: 0;
+}
+
+.expand {
+    animation: cursorAnim3 .5s forwards;
+    border: 1px solid red;
+}
+
+* {
+    cursor: none;
+}
