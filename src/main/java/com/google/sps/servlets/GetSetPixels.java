@@ -65,8 +65,8 @@ public class GetSetPixels extends HttpServlet {
         // Store pixel hex colors
         List<String> pixelsHexList = new ArrayList<>();
 
-        for (xAxis = 0; xAxis < width; xAxis++){
-            for (yAxis = 0; yAxis < height; yAxis++){
+        for (yAxis = 0; yAxis < height; yAxis++){
+            for (xAxis = 0; xAxis < width; xAxis++){
                 pixelRGB = img.getRGB(xAxis, yAxis);
                 colorGrid[xAxis][yAxis] = "#" + Integer.toHexString(pixelRGB).substring(2);
 
