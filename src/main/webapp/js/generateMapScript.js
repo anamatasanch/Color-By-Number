@@ -22,9 +22,12 @@ function setColor(gameButton) {
 }
 
 async function getColors() {
+  console.log("I am here");
   const response = await fetch('/color-grid');
   const colors = await response.json();
 
+  console.log("I am here");
+  console.log(response.json());
   let colorMap = createPalette(colors);
   createGrid(colors, colorMap);
   getActive();
