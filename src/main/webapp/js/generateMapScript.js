@@ -60,7 +60,7 @@ function createPalette(colors){
         }
     }
     return colorMap;
-  }
+}
 
 /** Creates <tr> and <td> elements containing the game buttons. */
 function createGrid(colors, colorMap) {
