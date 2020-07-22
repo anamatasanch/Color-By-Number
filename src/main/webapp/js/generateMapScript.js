@@ -10,8 +10,7 @@ function getActive(){
             console.log("New color", this.style.backgroundColor);
         });
     }
-  }
-
+}
 
 function setColor(gameButton) {
     var property = document.getElementById(gameButton);
@@ -31,11 +30,11 @@ async function getColors() {
 }
 
 function createPalette(colors){
-  let count = 1;
-  let colorMap = new Map();
+    let count = 1;
+    let colorMap = new Map();
 
-  for (i = 0; i < colors.length; i++) {
-        if (i===1){
+    for (i = 0; i < colors.length; i++) {
+        if (i===1) {
             let btnElement = document.createElement('button');
             btnElement.innerText = count;
             btnElement.classList.add('palette-button');
@@ -47,7 +46,7 @@ function createPalette(colors){
 
             colorMap.set(colors[i], count);
             count++;
-        }else if (!colorMap.has(colors[i])){
+        }else if (!colorMap.has(colors[i])) {
             let btnElement = document.createElement('button');
             btnElement.innerText = count;
             btnElement.classList.add('palette-button');
@@ -61,15 +60,15 @@ function createPalette(colors){
         }
     }
     return colorMap;
-  }
+}
 
 /** Creates <tr> and <td> elements containing the game buttons. */
- function createGrid(colors, colorMap) {
+function createGrid(colors, colorMap) {
     let trElement = document.createElement('tr');
     let gridDiv = document.getElementById("grid");
 
     for (i = 0; i < colors.length; i++) {
-        if (i%16===0){
+        if (i%16===0) {
             trElement = document.createElement('tr');
         }
         gridDiv.appendChild(trElement);
@@ -82,7 +81,7 @@ function createPalette(colors){
         btnElement.innerText = colorMap.get(colors[i]);
         tdElement.appendChild(btnElement);
     }
- }
+}
 
 function correctPopUp(){
     console.log("gotcha");
@@ -103,7 +102,7 @@ function customCursor() {
 
     document.addEventListener('click', () => {
         cursor.classList.add("expand");
-
+    
         setTimeout(() => {
             cursor.classList.remove("expand")
         }, 500)

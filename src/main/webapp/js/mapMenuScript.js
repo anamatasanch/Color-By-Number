@@ -1,3 +1,9 @@
+document.addEventListener('click', playMusic);
+function playMusic() {
+    document.getElementById('player').play();
+    document.removeEventListener('click', playMusic);
+}
+
 var mapIndex = 1;
 showMaps(mapIndex);
 

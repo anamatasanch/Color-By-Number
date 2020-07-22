@@ -5,9 +5,18 @@
         <title>Menu</title>
         <link rel="stylesheet" href="css/menuStyle.css">
         <script src="js/mapMenuScript.js"></script>
+        <script src="js/backgroundMusic.js"></script>
     </head>
 
     <body id="body" class="pixelated-scroll">
+
+        <audio id="player" preload="auto" src="/Audio/Wintergatan_Marble_Machine_Minecraft_Cover_Edit.mp3" loop="true" autobuffer>
+            Unsupported in Firefox
+        </audio>
+        <script>
+            playMusic();
+        </script>
+
         <div class="header">
             <h1>Color By Number</h1>
         </div>
@@ -48,6 +57,5 @@
             </center>
             </form>
         </div>
-
     </body>
 </html>
