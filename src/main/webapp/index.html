@@ -2,45 +2,52 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>Color-by number</title>
-        <link rel="stylesheet" href="css/style.css">
-        <script src="js/script.js"></script>
+        <title>Menu</title>
+        <link rel="stylesheet" href="css/menuStyle.css">
+        <script src="js/mapMenuScript.js"></script>
     </head>
-    <body onload="getActive()">
-      <div class="cursor"></div>
-      <script>customCursor()</script
-      <div id="pallette-section">
-        <h3 style="text-align:center;">Color Palette</h3>
-        <div class="pallette-holder" id="palette">
-          <button class="palette-button active-button" id="color1" style="background-color: #8BCBC8;">1</button>
-          <button class="palette-button" id="color2" style="background-color: #ECC7C0;">2</button>
-          <button class="palette-button" id="color3" style="background-color: #FDAE84;">3</button>
-          <button class="palette-button" id="color4" style="background-color: #DAE9E4;">4</button>
-          <button class="palette-button" id="color5" style="background-color: #3C2E3D;">5</button>
-        </div>
-      </div>
 
-      <div id="pallette-section">
-        <table id="grid">
-          <tr>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton01">1</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton02">1</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton03">1</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton04">4</button></td>
-          </tr>
-          <tr>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton05">5</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton06">2</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton07">2</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton08">2</button></td>
-          </tr>
-          <tr>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton09">3</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton10">3</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton11">3</button></td>
-            <td><button class="gameButton" onClick="setColor(this.id)" id="gameButton12">3</button></td>
-          </tr>
-        </table>
-      </div>
+    <body id="body" class="pixelated-scroll">
+        <div class="header">
+            <h1>Color By Number</h1>
+        </div>
+        <div class="container">
+            <form action="/color-grid" method="POST">
+            <center>
+                <table>
+                    <tr>
+                        <td>
+                            <a class="prev" onclick="plusMaps(-1)">&#10094;</a>
+                        </td>
+                        <td>
+                            <div class="allMaps firstMap fade">
+                                <button type='submit' name='mapChioce1' value='mapChioce1'><img class="map pixelMap" src="Default_Maps/Owl.png"/></button>
+                                <h2>Map 1</h2>
+                            </div>
+
+                            <div class="allMaps fade">
+                                <button type='submit' name='mapChioce2' value='mapChioce2'><img class="map pixelMap" src="Default_Maps/Orange_Cat.png"/></button>
+                                <h2>Map 2</h2>
+                            </div>
+
+                            <div class="allMaps fade">
+                                <button type='submit' name='mapChioce3' value='mapChioce3'><img class="map pixelMap" src="Default_Maps/Pig.png"/></button>
+                                <h2>Map 3</h2>
+                            </div>
+
+                            <div class="allMaps fade">
+                                <a href="pixelatemenu.html"><button type="button"><img class="map userMap" src="Default_Maps/User_Image.png"/></button></a>
+                                <h2>Upload Map</h2>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="next" onclick="plusMaps(1)">&#10095;</a>
+                        </td>
+                    </tr>
+                </table>
+            </center>
+            </form>
+        </div>
+
     </body>
 </html>
