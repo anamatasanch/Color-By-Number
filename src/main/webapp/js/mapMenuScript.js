@@ -1,7 +1,7 @@
-document.addEventListener('click', playMusic);
+document.addEventListener('mouseover', playMusic);
 function playMusic() {
     document.getElementById('player').play();
-    document.removeEventListener('click', playMusic);
+    document.removeEventListener('mouseover', playMusic);
 }
 
 var mapIndex = 1;
