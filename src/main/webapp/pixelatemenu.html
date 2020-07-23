@@ -11,29 +11,35 @@
         <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
     </head>
     <body onload="customCursor()">
-      <div class="cursor"></div>  
-      <div class="shadow-sm">
-        <nav class="navbar navbar-expand-lg navbar-dark">
-          <a class="navbar-brand" href="#">chromatic</a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-            <div class="navbar-nav">
-              <a class="nav-item nav-link" href="./index.html">Play</a>
-              <a class="nav-item nav-link active"  href="./pixelatemenu.html">Upload <span class="sr-only">(current)</span></a>
-            </div>
-          </div>
-        </nav>
-      </div>
+        <audio id="player" preload="auto" src="/Audio/Wintergatan_Marble_Machine_Minecraft_Cover_Edit.mp3" loop="true" autobuffer>
+            Unsupported in Firefox
+        </audio>
+        <script>
+            playMusic();
+        </script>
+        <div class="cursor"></div>  
+        <div class="shadow-sm">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <a class="navbar-brand" href="#">chromatic</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                    <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="./index.html">Play</a>
+                    <a class="nav-item nav-link active"  href="./pixelatemenu.html">Upload <span class="sr-only">(current)</span></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
       <div class="content-container">
         <div class="form-group">
-        <form action="/UploadServlet" method="POST" enctype="multipart/form-data">
-          <input type="file" name="file"/>
-          <br/>
-          <br/>
-          <input type="submit" value="Upload File" class="btn btn-primary" id="upload-btn"/>
-        </form>
+            <form action="/UploadServlet" method="POST" enctype="multipart/form-data">
+                <input type="file" name="file"/>
+                <br/>
+                <br/>
+                <input type="submit" value="Upload File" class="btn btn-primary" id="upload-btn"/>
+            </form>
         </div>
       </div>
 

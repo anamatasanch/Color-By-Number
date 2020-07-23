@@ -77,7 +77,7 @@ public class GetSetPixels extends HttpServlet {
         hexArray = pixelsHexList.toArray(hexArray);
 
         // Redirect back to the HTML page.
-        response.sendRedirect(request.getContextPath() + "/generateGridTest.html");
+        response.sendRedirect(request.getContextPath() + "/generateGrid.html");
     }
 
     @Override
