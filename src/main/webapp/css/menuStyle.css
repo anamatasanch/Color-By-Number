@@ -1,4 +1,4 @@
-html, body {
+.html, .body {
   	margin: 0;
   	width: 100%;
   	height: 100%;
@@ -33,7 +33,7 @@ div.header {
     text-align: center;
 }
 
-h1{
+.menu-title{
     color:#FFFFFF;
     font-size: 3vw;
     line-height: 4vw;
@@ -152,4 +152,23 @@ img.userMap {
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: #2c1c2d;
+}
+
+.content-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 25vh;
+}
+
+.form-group{
+    background-color: #FFE9D6;
+    padding: 12vh;
+}
+
+#upload-btn {
+    background-color: #E28479;
+    border-color: #E28479;
 }
