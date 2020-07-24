@@ -1,47 +1,35 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="html">
     <head>
         <meta charset="UTF-8">
-        <title>Color by number</title>
+        <title>Upload Menu</title>
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/menuStyle.css">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
         <script src="js/script.js"></script>
-        <script src="./path/to/dropzone.js"></script>
-        <link href='https://fonts.googleapis.com/css?family=ABeeZee' rel='stylesheet'>
     </head>
-    <body onload="customCursor()">
+
+    <body id="body" class="body pixelated-scroll">
         <audio id="player" preload="auto" src="/Audio/Wintergatan_Marble_Machine_Minecraft_Cover_Edit.mp3" loop="true" autobuffer>
             Unsupported in Firefox
         </audio>
         <script>
             playMusic();
         </script>
-        <div class="cursor"></div>  
-        <div class="shadow-sm">
-            <nav class="navbar navbar-expand-lg navbar-dark">
-                <a class="navbar-brand" href="#">chromatic</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div class="navbar-nav">
-                    <a class="nav-item nav-link" href="./index.html">Play</a>
-                    <a class="nav-item nav-link active"  href="./pixelatemenu.html">Upload <span class="sr-only">(current)</span></a>
-                    </div>
-                </div>
-            </nav>
+
+        <div class="header">
+            <h1 class="menu-title">Color By Number</h1>
         </div>
-      <div class="content-container">
-        <div class="form-group">
-            <form action="/UploadServlet" method="POST" enctype="multipart/form-data">
-                <input type="file" name="file"/>
-                <br/>
-                <br/>
-                <input type="submit" value="Upload File" class="btn btn-primary" id="upload-btn"/>
-            </form>
+        <div class="content-container">
+          <div class="form-group">
+              <form action="/UploadServlet" method="POST" enctype="multipart/form-data">
+                  <input type="file" name="file"/>
+                  <br/>
+                  <br/>
+                  <input type="submit" value="Upload File" class="btn btn-primary" id="upload-btn"/>
+              </form>
+          </div>
         </div>
-      </div>
 
       <!-- Scripts for bootstrap -->
       <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
