@@ -65,6 +65,10 @@
 
 .gameButton {
     margin: none;
+    box-shadow: 0 0 1px 0
+        inset, 0 0 0 1px;
+    color: white;
+    -webkit-text-stroke: 0.3px black;
     outline: none;
     width: 100%;
     padding-top: 50%;
