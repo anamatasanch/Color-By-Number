@@ -10,7 +10,6 @@
     padding: 20px;
     text-align:center;
     text-decoration: none;
-    display: inline-block;
     font-size: 50px;
     margin: 4px 25px;
     border-radius: 50%;
@@ -32,16 +31,6 @@
     left: 20%;
     top: 3%;
     background-color: rgba(255, 255, 255, 0.466);
-}
-
-h3 {
-    max-height:175px;
-    margin: auto;
-    width:60%;
-    padding: 10px;
-    position: fixed;
-    left: 20%;
-    top: 3%;
 }
 
 .pallette-holder :hover {
@@ -69,6 +58,7 @@ h3 {
     padding-top: 5vh;
     margin-left: auto;
     margin-right: auto;
+    margin-top: 200px;
 }
 
 .gameButton {
@@ -78,10 +68,6 @@ h3 {
     padding-top: 50%;
     padding-bottom: 50%;
     box-sizing: border-box;
-}
-
-table {
-    margin-top: 200px;
 }
 
 .cursor {
@@ -131,4 +117,53 @@ table {
 
 * {
     cursor: none;
+}
+
+.button {
+    border: none;
+
+    text-align: center;
+    cursor: pointer;
+    text-transform: uppercase;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    color: #FFFFFF;
+    font-weight: 600;
+    font-size: 1.5vw;
+    background-color: #BD7870;
+    padding: 1.7vh 7.5vw;
+    margin: 0 30px;
+}
+
+.button span {
+    position: relative;
+    z-index: 1;
+}
+
+.button:after {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 470%;
+    width: 140%;
+    background: rgb(244,213,209,.45);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+    -webkit-transform: translateX(-100%) translateY(-25%) rotate(45deg);
+    transform: translateX(-100%) translateY(-25%) rotate(45deg);
+  }
+
+.button:hover:after {
+    -webkit-transform: translateX(-9%) translateY(-25%) rotate(45deg);
+    transform: translateX(-9%) translateY(-25%) rotate(45deg);
+}
+
+.btn-container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+    width: 100%;
+    justify-content: center;
+    display: flex;
 }

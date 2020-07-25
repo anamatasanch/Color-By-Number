@@ -5,10 +5,10 @@
         <title>Color-by number</title>
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/backgroundStyle.css">
-        <script src="js/generateMapScript.js"></script>
+        <script src="js/script.js"></script>
         <script src="js/backgroundMusic.js"></script>
     </head>
-    <body onload="customCursor()" class="pixelated-scroll">
+    <body onload="customCursor()" class="body pixelated-scroll">
         <audio id="player" preload="auto" src="/Audio/Wintergatan_Marble_Machine_Minecraft_Cover_Edit.mp3" loop="true" autobuffer>
             Unsupported in Firefox
         </audio>
@@ -17,7 +17,7 @@
         </script>
         <div class="cursor"></div>
         <script type="text/javascript">
-            getColors();
+            getColorsMap();
         </script>
         <div id="pallette-section">
             <div class="pallette-holder" id="palette">
@@ -26,6 +26,10 @@
         <div id="pallette-section">
             <table id="grid">
             </table>
+        </div>
+        <div class="btn-container">
+          <a href="index.html"><button class="button">Menu</button></a>
+          <button class="button" onclick="checkGrid()">Submit</button>
         </div>
     </body>
 </html>
