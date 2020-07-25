@@ -20,8 +20,6 @@ function setColor(gameButton) {
     var x = document.getElementById("palette");
     var activeColor = x.getElementsByClassName("active-button");
     property.style.backgroundColor = activeColor[0].style.backgroundColor;
-    console.log("It was colored to ", hexc(activeColor[0].style.backgroundColor));
-    console.log("Correct color was ", correct.get(gameButton));
     if(hexc(activeColor[0].style.backgroundColor) == correct.get(gameButton)){
       tiles.delete(gameButton);
     }else if (!tiles.has(gameButton)){
@@ -124,18 +122,21 @@ function checkGrid(){
   if (tiles.size === 0){
     correctPopUp();
   }else{
-    tryAgainPopUp()
+    tryAgainPopUp();
+    for (const [key, value] of tiles.entries()) {
+      var tile = document.getElementById(key);
+      tile.style.backgroundColor = 'rgb(239, 239, 239)';
+      tile.blur();
+    }
   }
 }
 
 function correctPopUp(){
-    console.log("gotcha");
     alert("Correct!");
 }
 
 function tryAgainPopUp(){
-    console.log("gotcha");
-    alert("Sorry, try again!");
+    alert("Sorry, try again! Incorrectly colored cells will return to default.");
 }
 
 function customCursor() {
