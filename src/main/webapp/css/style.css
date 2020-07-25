@@ -41,7 +41,7 @@
 }
 
 .active-button {
-    box-shadow: 0 0 20px 0  
+    box-shadow: 0 0 20px 0
     inset, 0 0 20px 8px;
     border: 3px solid black;
 }
@@ -60,6 +60,7 @@
     margin-left: auto;
     margin-right: auto;
     margin-top: 200px;
+    table-layout: fixed ;
 }
 
 .gameButton {
