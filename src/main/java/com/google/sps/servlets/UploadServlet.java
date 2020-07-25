@@ -24,6 +24,7 @@ import com.google.gson.Gson;
 public class UploadServlet extends HttpServlet {
   String[] hexColors = new String[256];
 
+  @Override
   protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     Part filePart = request.getPart("file"); // Retrieves <input type="file" name="file">
     InputStream fileContent = filePart.getInputStream(); //Create input stream from "file"
@@ -49,14 +50,6 @@ public class UploadServlet extends HttpServlet {
         //Using rgb, convert to hex
         String hex = String.format("#%02x%02x%02x", r, g, b);
         hexColors[i] = hex;
-    }
-
-    //For now, save image to see the changes/pixalation
-    if (img!=null){
-      ImageIO.write(pixImg, "jpg", new File("output.jpg") );
-      System.out.println("image created");
-    }else{
-      System.out.println("Image was somehow null");
     }
 
     IOUtils.closeQuietly(fileContent);
