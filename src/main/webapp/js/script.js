@@ -42,8 +42,19 @@ function hexc(colorval) {
   return color;
 }
 
-async function getColors() {
+async function getColorsPix() {
     const response = await fetch('/UploadServlet');
+    const colors = await response.json();
+    tiles = new Map();
+    correct = new Map();
+
+    let colorMap = createPalette(colors);
+    createGrid(colors, colorMap);
+    getActive();
+}
+
+async function getColorsMap() {
+    const response = await fetch('/color-grid');
     const colors = await response.json();
     tiles = new Map();
     correct = new Map();
