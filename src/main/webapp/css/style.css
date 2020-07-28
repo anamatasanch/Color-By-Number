@@ -4,13 +4,10 @@
 
 .palette-button {
     border: none;
-    color: white;
-    -webkit-text-stroke-width: 1px;
-    -webkit-text-stroke-color: black;
     padding: 20px;
     text-align:center;
     text-decoration: none;
-    font-size: 200%;
+    font-size: 220%;
     margin: 4px 25px;
     border-radius: 50%;
     width: 100px;
