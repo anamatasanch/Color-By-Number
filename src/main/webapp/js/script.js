@@ -20,6 +20,7 @@ function setColor(gameButton) {
     var x = document.getElementById("palette");
     var activeColor = x.getElementsByClassName("active-button");
     property.style.backgroundColor = activeColor[0].style.backgroundColor;
+    property.style.color = activeColor[0].style.color;
     if(hexc(activeColor[0].style.backgroundColor) == correct.get(gameButton)){
       tiles.delete(gameButton);
     }else if (!tiles.has(gameButton)){
@@ -73,10 +74,9 @@ function createPalette(colors){
             btnElement.classList.add('palette-button');
             btnElement.classList.add('active-button');
             btnElement.setAttribute("id", count+'p');
-            btnElement.setAttribute("style", "background-color: "+colors[i]+";");
+            btnElement.setAttribute("style", "background-color: "+colors[i]+"; color: "+hexToLuma(colors[i])+";");
             let palletteDiv = document.getElementById("palette");
             palletteDiv.appendChild(btnElement);
-
             colorMap.set(colors[i], count);
             count++;
         }else if (!colorMap.has(colors[i])) {
@@ -84,7 +84,7 @@ function createPalette(colors){
             btnElement.innerText = count;
             btnElement.classList.add('palette-button');
             btnElement.setAttribute("id", count+'p');
-            btnElement.setAttribute("style", "background-color: "+colors[i]+";");
+            btnElement.setAttribute("style", "background-color: "+colors[i]+"; color: "+hexToLuma(colors[i])+";");
             let palletteDiv = document.getElementById("palette");
             palletteDiv.appendChild(btnElement);
 
@@ -154,3 +154,23 @@ function customCursor() {
         }, 500)
     })
 }
+
+//As explained in Gacek's answer
+//https://stackoverflow.com/questions/1855884/determine-font-color-based-on-background-color
+function hexToLuma(colour){
+  let d = 0;
+  let hex = colour.replace(/#/, '');
+  let r = parseInt(hex.substr(0, 2), 16);
+  let g = parseInt(hex.substr(2, 2), 16);
+  let b = parseInt(hex.substr(4, 2), 16);
+
+  let luma = ((0.299 * r) + (0.587 * g) + (0.114 * b))/255;
+  if (luma > 0.5){
+       d = 0;
+  }else{
+       d = 255;
+  }
+
+  let color = "rgb("+d+","+d+","+d+")";
+  return color
+};
