@@ -20,6 +20,7 @@ function setColor(gameButton) {
     var x = document.getElementById("palette");
     var activeColor = x.getElementsByClassName("active-button");
     property.style.backgroundColor = activeColor[0].style.backgroundColor;
+    property.style.color = activeColor[0].style.color;
     if(hexc(activeColor[0].style.backgroundColor) == correct.get(gameButton)){
       tiles.delete(gameButton);
     }else if (!tiles.has(gameButton)){
