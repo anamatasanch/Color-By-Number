@@ -158,7 +158,6 @@ function customCursor() {
 //https://stackoverflow.com/questions/1855884/determine-font-color-based-on-background-color
 function hexToLuma(colour){
   let d = 0;
-  console.log("I see this color",colour);
   let hex = colour.replace(/#/, '');
   let r = parseInt(hex.substr(0, 2), 16);
   let g = parseInt(hex.substr(2, 2), 16);
@@ -172,6 +171,5 @@ function hexToLuma(colour){
   }
 
   let color = "rgb("+d+","+d+","+d+")";
-  console.log("text should be",color);
   return color
 };
